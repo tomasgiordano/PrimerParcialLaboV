@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TomasGiordanoPP</string>
+    <string name="edit_name">Modificar</string>
+    <string name="cantidad">Cantidad: </string>
+    <string name="editar">EDITAR</string>
+    <string name="precio">Precio unidad: </string>
+    <string name="productoNombre">Nombre del Producto</string>
+</resources>

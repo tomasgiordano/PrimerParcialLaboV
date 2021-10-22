@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TomasGiordanoPP</string>
+    <string name="edit_name">Modify</string>
+    <string name="cantidad">Count: </string>
+    <string name="precio">Unit Price: </string>
+    <string name="editar">EDIT</string>
+    <string name="productoNombre">Product Name</string>
+</resources>
