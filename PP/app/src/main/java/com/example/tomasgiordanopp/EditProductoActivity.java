@@ -28,9 +28,10 @@ public class EditProductoActivity extends AppCompatActivity {
         int position = getIntent().getIntExtra("position",-1);
 
         myApplication = (MyApplication) this.getApplication();
+        ArrayList<Producto> productosList = myApplication.getProductosList();
 
         vista = new Vista(modelo,this);
-        controlador = new Controlador(modelo,vista,position,myApplication.getProductosList());
+        controlador = new Controlador(modelo,vista,position,productosList);
 
         vista.setControlador(controlador);
 

@@ -19,7 +19,7 @@ public class MyApplication extends Application  {
     private ArrayList<Producto> productosList = new ArrayList<Producto>();
 
     public MyApplication(){
-        fillListProductos();
+
     }
 
     public void fillListProductos()

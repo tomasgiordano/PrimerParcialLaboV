@@ -10,13 +10,13 @@ public class Controlador implements View.OnClickListener{
     private Producto modelo;
     private Vista vista;
     private int Position;
-    private ArrayList<Producto> PersonasList;
+    private ArrayList<Producto> ProductosList;
 
     public Controlador(Producto modelo,Vista vista,int position,ArrayList<Producto> productosList){
         this.modelo = modelo;
         this.vista = vista;
         this.Position = position;
-        this.PersonasList = productosList;
+        this.ProductosList = productosList;
     }
 
     @Override
@@ -24,9 +24,9 @@ public class Controlador implements View.OnClickListener{
     {
         this.vista.cargarModelo();
 
-        Log.d("Persona",this.modelo.toString());
+        Log.d("Producto",this.modelo.toString());
         Toast.makeText(vista.activity,"Guardado", Toast.LENGTH_SHORT).show();
-        this.PersonasList.set(Position,this.modelo);
+        this.ProductosList.set(Position,this.modelo);
 
         vista.returnToMain();
     }

@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity implements ProductoAdapter.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        myApplication = (MyApplication) this.getApplication();
+
         Handler handler = new Handler(this);
         EjecutarHTTP miHilo = new EjecutarHTTP(handler);
         miHilo.start();
@@ -44,7 +46,8 @@ public class MainActivity extends AppCompatActivity implements ProductoAdapter.O
     public boolean handleMessage(@NonNull Message msg) {
         ArrayList<Producto> lista = (ArrayList<Producto>)  msg.obj;
 
-        myApplication = (MyApplication) new MyApplication();
+        if(myApplication.getProductosList().isEmpty())
+            myApplication.setProductosList(lista);
 
         ProductoAdapter productosAdapter = new ProductoAdapter(myApplication.getProductosList(),this);
         RecyclerView rv = super.findViewById(R.id.rv);
