@@ -2,6 +2,7 @@ package com.example.tomasgiordanopp.MVC;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.os.Parcelable.Creator;
 
 public class Producto implements Parcelable {
     private String Nombre;
@@ -62,7 +63,7 @@ public class Producto implements Parcelable {
     }
 
     @SuppressWarnings("unused")
-    public static final Parcelable.Creator<Producto> CREATOR = new Parcelable.Creator<Producto>() {
+    public static final Creator<Producto> CREATOR = new Creator<Producto>() {
         @Override
         public Producto createFromParcel(Parcel parcel) {
             return new Producto(parcel);
